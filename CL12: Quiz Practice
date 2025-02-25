@@ -1,0 +1,20 @@
+"""quiz practice"""
+
+
+def fizzbuzz(n: int) -> str:
+    """this determines the divisibility of n."""
+    if n % 3 == 0 and n % 5 != 0:
+        print("fizz")
+        return fizzbuzz(n=n + 1)
+    if n % 5 == 0 and n % 3 != 0:
+        print("buzz")
+        return fizzbuzz(n=n + 1)
+    if n % 3 != 0 and n % 5 != 0:
+        print(f"{n}")
+        return fizzbuzz(n=n + 1)
+    if n % 3 == 0 and n % 5 == 0:
+        print("fizzbuzz")
+        return "fizzbuzz"
+
+
+print(fizzbuzz(n=12))

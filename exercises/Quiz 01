@@ -1,0 +1,30 @@
+def eight_ball(choice: int) -> str:
+    """returns an 8-ball response."""
+    if choice < 0:
+        return "Unlikely"
+    elif choice >= 0 and choice <= 10:
+        return "It is certain"
+    if choice > 10:
+        return "ask again later"
+
+
+def fizzbuzz(n: int) -> str:
+    """dtermines the divisibility of n."""
+    if n % 3 == 0 and n % 5 != 0:
+        return "Fizz"
+    if n % 5 == 0 and n % 3 != 0:
+        return "buzz"
+    if n % 3 == 0 and n % 5 == 0:
+        return "fizzbuzz"
+    else:
+        return str(n)
+
+
+def summit(n: int) -> int:
+    """returns the sum of all positive."""
+    if n < 0:
+        return -1
+    return summit()
+
+
+print(eight_ball(choice=11))

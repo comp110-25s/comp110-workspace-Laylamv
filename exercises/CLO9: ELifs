@@ -1,0 +1,16 @@
+def celebrate(winner: str) -> None:
+    print(f"Yay, {winner}!")
+
+
+def get_votes(beyonce: int, Kendrick: int, other: int) -> str:
+    """Find RoTY winner."""
+    if other > beyonce and other > Kendrick:
+        return "Someone else!"
+    elif Kendrick > beyonce:
+        return "Kendrick"
+    else:
+        return "Beyonce"
+    return "Charli"
+
+
+celebrate(get_votes(beyonce=6000, Kendrick=3000, other=4000))

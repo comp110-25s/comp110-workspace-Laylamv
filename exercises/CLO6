@@ -1,0 +1,51 @@
+"""Examples of conditionals"""
+
+
+def number_report(x: int) -> None:
+    """print some numerical properties of x"""
+    if x % 2 == 0:
+        print("even")
+    else:
+        print("odd")
+
+    if x % 3 == 0:
+        print("Divisible by 3")
+
+    if x == 0:
+        print("zero")
+    else:
+        if x > 0:
+            print("Positive")
+        else:
+            print("Negative")
+
+    print("x is " + str(x))
+
+
+print(number_report(x=110))
+
+
+"""Number_report with Elif syntax and f-strings"""
+
+
+def number_report(x: int) -> None:
+    """print some numerical properties of x"""
+    if x % 2 == 0:
+        print("even")
+    else:
+        print("odd")
+
+    if x % 3 == 0:
+        print("Divisible by 3")
+
+    if x == 0:
+        print("zero")
+    elif x > 0:
+        print("Positive")
+    else:
+        print("Negative")
+
+    print(f"x is {x}")
+
+
+print(number_report(x=110))

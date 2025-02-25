@@ -1,0 +1,33 @@
+"""check the first letter"""
+
+
+def check_first_letter(word: str, letter: str) -> str:
+    """check the first letter"""
+    if word[0] == letter:
+        return "Match!"
+    else:
+        return "No Match!"
+
+
+print(check_first_letter(word="flower", letter="f"))
+
+
+def animal_lover(animal: str) -> str:
+    """what animal do you like?"""
+    print(f"I love {animal}")
+
+
+print(animal_lover(animal="horses"))
+
+
+def animal_lover(animal: str) -> str:
+    """what animal do you like?"""
+    print("I love " + str(animal))
+
+
+def can_drive(age: int, has_drivers_license: bool) -> bool:
+    """determines if you can legally drive"""
+    return age >= 16 or has_drivers_license
+
+
+print(can_drive(age=18, has_drivers_license=False))

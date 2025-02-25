@@ -1,0 +1,30 @@
+x: int = 1
+y: int = 3
+y = x
+y = y + 1
+x = x - 4
+
+print(y)
+
+
+def pizza_price(size: int, toppings: int) -> float:
+    """calculates the price of a pizza"""
+    price: float = 10.0
+
+    if size >= 16:
+        price = 20.0
+
+    price = price + toppings * 0.75
+
+    return price
+
+
+total_price = pizza_price(size=14, toppings=2)
+print(total_price)
+
+
+x: int = 1
+x = x + 1
+x
+
+print(x)

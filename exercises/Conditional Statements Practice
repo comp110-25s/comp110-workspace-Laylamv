@@ -1,0 +1,13 @@
+"""check the first letter."""
+
+
+def check_first_letter(word: str, letter: str) -> None:
+    """check the first letter."""
+    if word[0] == letter:
+        return "Match!"
+    else:
+        return "No Match!"
+
+
+print(check_first_letter(word="flower", letter="f"))
+print(check_first_letter(word="Hello", letter="e"))
