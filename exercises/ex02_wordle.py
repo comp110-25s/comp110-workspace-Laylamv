@@ -7,7 +7,7 @@ def contains_char(word: str, character: str) -> bool:
     """This searches for a character in a word"""
     assert len(character) == 1, f"len('{character}') is not 1"
     idx: int = 0
-    while idx < len(word):
+    while idx < len(word):  # the loop iterates to see if character is somewhere in word
         if word[idx] == character:
             return True
         idx = idx + 1

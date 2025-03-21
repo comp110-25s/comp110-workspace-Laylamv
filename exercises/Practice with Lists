@@ -1,0 +1,28 @@
+def mutator(x: int, exes: list[int]) -> int:
+    """an impure function..."""
+    x += 1
+    exes[0] += 1
+    y: int = x + 1
+    print(f"mutator x: {x}, exes: {exes}, y: {y}")
+    return x
+
+
+x: int = 0
+exes: list[int] = [0]
+y: int = 0
+print(f"global before x: {x}, exes: {exes}, y: {y}")
+y = mutator(x, exes) + 2  # would return 1 (1+ 2=3)
+print(f"global after x: {x}, exes: {exes}, y: {y}")
+
+
+# swapping values at indices
+two_d: list[list[int]] = [[10, 20], [30, 40], [50, 60]]
+
+temp: int = two_d[1]  # [30, 40] stored here
+two_d[1] = two_d[0]
+two_d[0] = temp
+
+print(two_d)
+
+two_d[2][1] = 70  # Assigning new value for that index
+print(two_d)

@@ -31,4 +31,4 @@ def triangle(n: int) -> None:
         i += 1
 
 
-print(triangle(2))
+triangle(2)

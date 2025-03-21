@@ -14,3 +14,17 @@ def get_votes(beyonce: int, Kendrick: int, other: int) -> str:
 
 
 celebrate(get_votes(beyonce=6000, Kendrick=3000, other=4000))
+
+
+def triangle(n: int) -> None:
+    i: int = 1
+    line: str
+    while i <= n:
+        line = ""
+        while len(line) < i:
+            line += "*"
+        print(line)
+        i += 1
+
+
+triangle(2)

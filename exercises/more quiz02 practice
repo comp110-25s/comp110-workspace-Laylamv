@@ -1,0 +1,123 @@
+def modify_list(numbers: list[int]) -> list[int]:
+    """Modifies the list by removing even numbers and doubling odd numbers."""
+    idx: int = 0
+    while idx < len(numbers):
+        if numbers[idx] % 2 == 0:
+            numbers.pop(idx)
+        else:
+            numbers[idx] *= 2
+            idx += 1
+    return numbers
+
+
+# Example usage:
+
+
+# funcion writing practice:
+# The function should accept a list of integers as a parameter.
+# The function must mutate the list by removing all negative numbers while keeping positive numbers and zero.
+# The function should not return anything (None).
+# you should explicitly type all variables, parameters, and return types
+
+
+def remove_negatives(nums: list[int]) -> None:
+    """Removes the negative ints from the list."""
+    idx: int = 0
+    while idx < len(nums):
+        if nums[idx] < 0:
+            nums.pop(idx)
+        else:
+            idx = idx + 1
+    return None
+
+
+def double_evens(x: list[int]) -> None:
+    """Doubles all even numbers."""
+    idx: int = 0
+    while idx < len(x):
+        if x[idx] % 2 == 0:
+            x[idx] *= 2
+        idx = idx + 1
+    return None
+
+
+def countdown_and_store(n: int) -> list[int]:
+    """Counts down from n to 1 and stores values in a list."""
+    result: list[int] = []  # Creates a new list in heap memory
+    while n > 0:
+        print(n)
+        result.append(n)  # Mutates the list
+        n -= 1  # Updates the variable n
+    return result
+
+
+# Global scope
+start: int = 3
+countdown_list: list[int] = countdown_and_store(start)
+
+print(f"After function call: start = {start}, countdown_list = {countdown_list}")
+
+
+def double_until_threshold(values: list[int], threshold: int) -> None:
+    """Doubles each element until the threshold is reached."""
+    idx: int = 0
+    while idx < len(values) and values[idx] <= threshold:
+        if values[idx] == threshold:
+            idx = idx + 1
+        else:
+            values[idx] = values[idx] * 2
+            idx = idx + 1
+    return None
+
+
+nums = [2, 5, 10, 15]
+double_until_threshold(nums, 40)
+print(nums)
+
+
+def count_to_n(n: int) -> None:
+    """counts from n to count."""
+    count: int = 0
+    while count <= n:
+        print(f"Count is: {count}")
+        count = count + 1
+    return None
+
+
+def sum_list(values: list[int]) -> int:
+    """Returns the sum of all elements in the list."""
+    idx: int = 0
+    total: int = 0
+    while idx < len(values):
+        total = total + values[idx]
+        idx = idx + 1
+
+    return total
+
+
+nums: list[int] = [2, 3, 4, 5]
+print(sum_list(nums))
+
+
+def count_occurrences(values: list[int], target: int) -> int:
+    """Returns the number of times the target appears in the list."""
+    idx: int = 0
+    total: int = 0
+    while idx < len(values):
+        if values[idx] == target:
+            total = total + 1
+        idx = idx + 1
+
+    return total
+
+
+values: list[int] = [3, 4, 2, 2, 2, 3, 4, 2]
+print(count_occurrences(values, 2))
+print(len(values))
+
+fruits: list[str] = ["Cherry", "Apple", "blueberry"]
+# If we wanted to switch values at index 1 and 2:
+temp: str = fruits[1]
+fruits[1] = fruits[2]
+fruits[2] = temp
+print(fruits)

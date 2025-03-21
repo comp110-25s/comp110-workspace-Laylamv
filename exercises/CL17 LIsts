@@ -1,0 +1,47 @@
+# some practice with Lists
+
+game_points: list[int] = [89, 36, 99, 100]
+
+print(game_points)
+print(
+    game_points[3]
+)  # this uses subscription notation to determine the value at that index
+print(game_points.append(45))  # this adds the integer value 45 to the list
+print(game_points)  # This prints the list and its values to the output (in brackets)
+game_points.pop(
+    4
+)  # pop removes the value at whatever index indicated in the parentheses
+print(game_points)
+game_points[1] = (
+    71  # using subscription notation to modify an index (this will replace 36 with 71)
+)
+print(game_points)
+print(
+    len(game_points)
+)  # this prints the length of the list (just count the number of values)
+
+
+animals: list[str] = []
+print(animals)
+animals.append("cats")
+print(animals)
+animals.append("horses")
+print(animals)
+animals.append("sharks")
+print(animals)
+print(animals[2])
+animals[1] = "dogs"
+print(animals)
+print(len(animals) + 3)
+print(len(animals) + 12 / 2)  # division between two ints returns a float
+
+fruits: list[str] = ["apples", "grapes", "oranges"]
+print(fruits)
+
+temp: str = fruits[
+    2
+]  # to switch the values we need to declare and initialize a temporary variable
+fruits[2] = fruits[0]
+fruits[0] = temp
+
+print(fruits)

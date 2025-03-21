@@ -1,4 +1,4 @@
-x: int = 1
+x: int = 1  # Declaration and initialization
 y: int = 3
 y = x
 y = y + 1
@@ -19,7 +19,7 @@ def pizza_price(size: int, toppings: int) -> float:
     return price
 
 
-total_price = pizza_price(size=14, toppings=2)
+total_price: int = pizza_price(size=16, toppings=2)
 print(total_price)
 
 
@@ -28,3 +28,6 @@ x = x + 1
 x
 
 print(x)
+
+# Unbound local error=Declaration but no initialization
+# Name Error: when trying to access variable but using wrong name
